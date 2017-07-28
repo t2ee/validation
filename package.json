@@ -1,0 +1,32 @@
+{
+  "name": "@t2ee/validation",
+  "version": "1.0.0-alpha",
+  "description": "validation",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc -p src/tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t2ee/validation.git"
+  },
+  "keywords": [
+    "t2ee",
+    "validation"
+  ],
+  "author": "Qiaosen Huang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t2ee/validation/issues"
+  },
+  "homepage": "https://github.com/t2ee/validation#readme",
+  "dependencies": {
+    "@t2ee/core": "^0.1.9",
+    "typescript": "^2.4.2"
+  },
+  "devDependencies": {
+    "reflect-metadata": "^0.1.10"
+  }
+}
