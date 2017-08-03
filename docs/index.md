@@ -25,7 +25,7 @@ This projects aims to be foundation component for the rest of [@t2ee](https://gi
 
 # Installation
 
-`npm i reflect-metadata @t2ee/core -S`
+`npm i reflect-metadata @t2ee/core @t2ee/validation -S`
 
 # Usage
 
