@@ -7,7 +7,7 @@ import ValidationRule from '../core/ValidationRule';
 @ValidationRule('NotNull')
 class NotNullRule implements Rule {
     validate(value: any, parameter: any, meta: AutoWireMeta, args: any[]): boolean {
-        return !!value;
+        return value !== null && value !== undefined;
     }
 }
 

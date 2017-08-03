@@ -1,28 +1,37 @@
+<p align="center">
+    <a href="http://t2ee.org">
+        <img width="200" src="http://t2ee.org/img/logos/t2ee.png">
+    </a>
+</p>
+<p align="center">
+    <a href="http://validation.t2ee.org">
+        <img width="200" src="http://t2ee.org/img/logos/validation.png">
+    </a>
+</p>
+
+<p align="center">
+    <a href="https://travis-ci.org/t2ee/validation">
+        <img src="https://img.shields.io/travis/t2ee/validation/master.svg?style=flat-square">
+    </a>
+    <a href="https://coveralls.io/r/t2ee/validation?branch=master">
+        <img src="https://img.shields.io/coveralls/t2ee/validation/master.svg?style=flat-square">
+    </a>
+</p>
+
 # Introducation
-this library uses [@t2ee/core](https://github.com/t2ee/core) to manage all dependency injections
 
-You should install `reflect-metadata` and import it in your top level file (bring your own `reflect-metadata`).
+This library fully uses the advantages of decorators, make it smooth to write validation rules.
 
-# Example
+For detailed introductions and examples, please visit [validation.t2ee.org](http://validation.t2ee.org).
 
-## Example usage with [@t2ee/vader](https://github.com/t2ee/vader)
+
+# Installation
+
+`npm i reflect-metadata @t2ee/core @t2ee/validation -S`
+
+# Example usage with [@t2ee/vader](https://github.com/t2ee/vader)
 
 ```typescript
-import {
-    Router,
-    POST,
-    Body,
-    Response,
-    Path,
-} from '@t2ee/vader';
-import {
-    Valid,
-    NotNull,
-    Min,
-} from '@t2ee/validation';
-import Koa from 'koa';
-const router = Router.newInstance();
-
 class Message {
     @NotNull
     @Min(4)
@@ -39,32 +48,5 @@ class Controller {
         // message should be at least 4 characters long
     }
 }
-
-router.use(Controller);
-const app = new Koa();
-app.use(router.routes());
-app.listen(8080);
 ```
 
-## Example custom rule
-
-```typescript
-import {
-    Rule,
-    ValidationRule,
-    CustomRule,
-} from '@t2ee/validation';
-import {
-    AutoWireMeta,
-} from '@t2ee/core';
-
-const IsGender = CustomRule('IsGender', `shuold be either 'male' or 'female'`);
-
-@ValidationRule('IsGender')
-class IsGenderRule implements Rule {
-    validate(value: any, parameter: any, meta: AutoWireMeta, args: any[]): boolean {
-        return value === 'male' || value === 'female';
-    }
-}
-
-```

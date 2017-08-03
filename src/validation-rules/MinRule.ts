@@ -8,6 +8,9 @@ import ValidationRule from '../core/ValidationRule';
 class MinRule implements Rule {
     validate(value: any, parameter: any, meta: AutoWireMeta, args: any[]): boolean {
         const type = meta.declaredType;
+        if (parameter.value === null || parameter.value === undefined) {
+            return true;
+        }
         if (type === String || type === Array) {
             return value.length >= parameter.value;
         } else if (type === Number) {

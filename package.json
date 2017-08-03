@@ -1,12 +1,15 @@
 {
   "name": "@t2ee/validation",
-  "version": "1.0.0-alpha-1",
+  "version": "1.0.0",
   "description": "validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "tsc -p src/tsconfig.json"
+    "build": "rm -rf dist && tsc -p src/tsconfig.json",
+    "build-test": "rm -rf test-dist/ && tsc -p src/tsconfig.test.json",
+    "test": "npm run build-test && ava test-dist/**/*.test.js",
+    "coverage": "npm run build-test && nyc ava -- test-dist/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -17,16 +20,18 @@
     "validation"
   ],
   "author": "Qiaosen Huang",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/t2ee/validation/issues"
   },
   "homepage": "https://github.com/t2ee/validation#readme",
-  "dependencies": {
+  "peerDependencies": {
     "@t2ee/core": "^0.1.9",
-    "typescript": "^2.4.2"
+    "typescript": "^2.4.2",
+    "reflect-metadata": "^0.1.10"
   },
   "devDependencies": {
-    "reflect-metadata": "^0.1.10"
+    "ava": "^0.21.0",
+    "nyc": "^11.1.0"
   }
 }

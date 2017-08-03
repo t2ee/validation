@@ -17,15 +17,15 @@ import Length from './rules/Length';
 import Pattern from './rules/Pattern';
 
 import PatternRule from './validation-rules/PatternRule';
-import MaxRule from './validation-rules/PatternRule';
-import MinRule from './validation-rules/PatternRule';
-import LengthRule from './validation-rules/PatternRule';
-import NotNullRule from './validation-rules/PatternRule';
+import MaxRule from './validation-rules/MaxRule';
+import MinRule from './validation-rules/MinRule';
+import LengthRule from './validation-rules/LengthRule';
+import NotNullRule from './validation-rules/NotNullRule';
+
+import ValidationErrorHandler from './core/ValidationErrorHandler';
 
 import {
     Container,
-    Component,
-    AutoWired,
 } from '@t2ee/core';
 
 
@@ -49,9 +49,11 @@ export {
     Length,
     Pattern,
 
+    PatternRule,
     LengthRule,
     MaxRule,
     MinRule,
     NotNullRule,
-    PatternRule,
+
+    ValidationErrorHandler,
 };
