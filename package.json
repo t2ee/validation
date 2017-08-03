@@ -1,6 +1,6 @@
 {
   "name": "@t2ee/validation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -26,8 +26,8 @@
   },
   "homepage": "https://github.com/t2ee/validation#readme",
   "peerDependencies": {
-    "@t2ee/core": "^0.1.9",
-    "typescript": "^2.4.2",
+    "@t2ee/core": "0.1.x",
+    "typescript": "2.x",
     "reflect-metadata": "^0.1.10"
   },
   "devDependencies": {
