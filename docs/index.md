@@ -92,7 +92,7 @@ const IsEmail = Pattern(/[\d\w]*\@[\d\w]*\.[\w]*/);
 
 dataType | description
 ---------|-------------
-null | undefined | not checked
+null or undefined | not checked
 String   | checks the length of the string
 Number   | checks Number.toString() length
 Array    | checks array length
