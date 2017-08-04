@@ -1,11 +1,11 @@
 <p align="center">
-    <a href="http://t2ee.org">
-        <img width="200" src="http://t2ee.org/img/logos/t2ee.png">
+    <a href="//t2ee.org">
+        <img width="200" src="//t2ee.org/img/logos/t2ee.png">
     </a>
 </p>
 <p align="center">
-    <a href="http://validation.t2ee.org">
-        <img width="200" src="http://t2ee.org/img/logos/validation.png">
+    <a href="//validation.t2ee.org">
+        <img width="200" src="//t2ee.org/img/logos/validation.png">
     </a>
 </p>
 
@@ -22,7 +22,7 @@
 
 This library fully uses the advantages of decorators, make it smooth to write validation rules.
 
-For detailed introductions and examples, please visit [validation.t2ee.org](http://validation.t2ee.org).
+For detailed introductions and examples, please visit [validation.t2ee.org](//validation.t2ee.org).
 
 
 # Installation
